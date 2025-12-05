@@ -13,7 +13,7 @@ app.use(express.json());
 // MongoDB Connection
 const connectDB = async () => {
   try {
-    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://root:example@localhost:27017/to-do?authSource=admin';
+    const MONGODB_URI = process.env.MONGODB_URI
     
     // Remove the deprecated options
     const conn = await mongoose.connect(MONGODB_URI);
